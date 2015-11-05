@@ -12,5 +12,5 @@ RUN chmod +x /usr/bin/start-cron.sh
 RUN touch /var/log/cron.log
 
 RUN apt-get install -y net-tools
-
+RUN apt-get install -y isc-dhcp-client && apt-get install -y wpasupplicant
 CMD /usr/bin/start-cron.sh

@@ -7,7 +7,7 @@ RUN apt-get -y install rsyslog
 RUN mkdir /log
 ADD files/etc/crontab /etc/crontab
 ADD files/bin/start-cron.sh /usr/bin/start-cron.sh
-ADD files/wlan-monitor.sh /run.sh
+ADD files/br-monitor.sh /run.sh
 RUN chmod +x /usr/bin/start-cron.sh
 RUN touch /var/log/cron.log
 

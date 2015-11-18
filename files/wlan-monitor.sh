@@ -10,6 +10,7 @@ YmdDateTime=`date '+%Y%m%d%H%M'`
 	#sleep 60
    else
 	echo "$YmdDateTime Network connection down! Attempting reconnection."
+	/sbin/dhclient -r wlan0
         /sbin/ifup --force wlan0
       	#echo "OK"
       	#sleep 10
